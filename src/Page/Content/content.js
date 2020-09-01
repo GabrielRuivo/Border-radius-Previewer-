@@ -15,43 +15,57 @@ function Content(){
         const valueTopLeft = document.getElementById('main').style.borderTopLeftRadius=`${topLeft}px`;  
 
         const ShowCode = 
-          `-webkit-border-top-left-radius:${valueTopLeft} </br>
-           -moz-border-radius-topleft:${valueTopLeft} </br>
-           border-top-left-radius:${valueTopLeft}` 
+          `<p>-webkit-border-top-left-radius:${valueTopLeft}</p> </br>
+           <p>-moz-border-radius-topleft:${valueTopLeft}</p> </br>
+           <p>border-top-left-radius:${valueTopLeft}</p>` 
         
         document.getElementById('codeTopLeft').innerHTML = ShowCode;
         
 
-      } if (topRight) {
+      } if (topLeft <= 0) {
+        document.getElementById('codeTopLeft').innerHTML = '';
+      } 
+      
+      if (topRight) {
         const valueTopRight = document.getElementById('main').style.borderTopRightRadius=`${topRight}px`;
 
         const ShowCode = 
-          `-webkit-border-top-Right-radius:${valueTopRight} </br>
-           -moz-border-radius-topright:${valueTopRight} </br>
-           border-top-Right-radius:${valueTopRight}` 
+          `<p>-webkit-border-top-Right-radius:${valueTopRight} </p> </br>
+          <p>-moz-border-radius-topright:${valueTopRight}</p> </br>
+          <p>border-top-Right-radius:${valueTopRight}</p>` 
         
         document.getElementById('codeTopRight').innerHTML = ShowCode;
 
-      } if (bottomLeft) {
+      } if (topRight <= 0) {
+        document.getElementById('codeTopRight').innerHTML = '';
+      } 
+      
+      if (bottomLeft) {
         const valueBottomLeft = document.getElementById('main').style.borderBottomLeftRadius=`${bottomLeft}px`;
 
         const ShowCode = 
-          `-webkit-border-bottom-Left-radius:${valueBottomLeft} </br>
-           -moz-border-radius-bottomleft:${valueBottomLeft} </br>
-           border-bottom-Left-radius:${valueBottomLeft}` 
+          `<p>-webkit-border-bottom-Left-radius:${valueBottomLeft}</p> </br>
+          <p>-moz-border-radius-bottomleft:${valueBottomLeft}</p> </br>
+          <p>border-bottom-Left-radius:${valueBottomLeft}</p>` 
         
         document.getElementById('codeBottomLeft').innerHTML = ShowCode;
 
-      } if (bottomRight) {
+      } if (bottomLeft <= 0) {
+        document.getElementById('codeBottomLeft').innerHTML = '';
+      } 
+      
+      if (bottomRight) {
         const valueBottomRight = document.getElementById('main').style.borderBottomRightRadius=`${bottomRight}px`;
 
         const ShowCode = 
-          `-webkit-border-bottom-Right-radius:${valueBottomRight} </br>
-           -moz-border-radius-bottomright:${valueBottomRight} </br>
-           border-bottom-Right-radius:${valueBottomRight}` 
+          `<p>-webkit-border-bottom-Right-radius:${valueBottomRight}</p> </br>
+          <p>-moz-border-radius-bottomright:${valueBottomRight}</p> </br>
+           <p>border-bottom-Right-radius:${valueBottomRight}</p>` 
         
         document.getElementById('codeBottomRight').innerHTML = ShowCode;
 
+      } if (bottomRight <= 0) {
+        document.getElementById('codeBottomRight').innerHTML = '';
       }
   }, [topLeft, topRight, bottomLeft, bottomRight] )
 
